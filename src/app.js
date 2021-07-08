@@ -2,11 +2,12 @@ const path = require(`path`);
 const express = require(`express`);
 const hbs = require(`hbs`);
 const geocode = require(`./utils/geocode`);
-const forecast = require(`./utils/forecast`)
+const forecast = require(`./utils/forecast`);
 
 
 // Create a new express app.
 const app = express();
+const port = process.env.PORT || 3000;
 
 // Define path variables.
 const viewsPath = path.join(__dirname, `../templates/views`);
@@ -113,6 +114,6 @@ app.get(`*`, (req, res) => {
 })
 
 // Start the server.
-app.listen(3000, () => {
-    console.log(`The server is running on port 3000.`)
+app.listen(port, () => {
+    console.log(`The server is running on port ${port}.`)
 })
