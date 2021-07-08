@@ -21,6 +21,7 @@ const forecast = function(lat, long, callback) {
                 weather_description: data.current.weather_descriptions[0],
                 location: data.location.name,
                 state: data.location.region,
+                icon: data.current.weather_icons[0] ? data.current.weather_icons[0] : ``,
             });
         }
     });

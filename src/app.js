@@ -64,13 +64,14 @@ app.get(`/weather`, (req, res) => {
                         error: error
                     })
                 }
-                response.forecast = `${response.location} ${response.state} is currently ${response.weather_description.toLowerCase()} with a temperature of ${response.temperature} degrees farrenheit.`
-                    res.send({
-                        forecast: response.forecast,
-                        location: response.location, 
-                        state: response.state, 
-                        temperature: response.temperature
-                    });
+                response.forecast = `${response.location} ${response.state} is currently ${response.weather_description.toLowerCase()} with a temperature of ${response.temperature} degrees farrenheit.`;
+                res.send({
+                    forecast: response.forecast,
+                    location: response.location, 
+                    state: response.state, 
+                    temperature: response.temperature,
+                    icon: response.icon,
+                });
             });
         })
     } else {

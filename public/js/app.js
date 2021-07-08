@@ -2,6 +2,7 @@ const weatherForm = document.querySelector(`form`);
 const searchInput = document.querySelector(`input`);
 const errorParagraph = document.querySelector(`.errorParagraph`);
 const forecastParagraph = document.querySelector(`.forecastParagraph`);
+const weatherImg = document.querySelector(`.weather-icon`);
 
 weatherForm.addEventListener(`submit`, (event) => {
     event.preventDefault();
@@ -18,6 +19,7 @@ weatherForm.addEventListener(`submit`, (event) => {
             forecastParagraph.textContent = data.forecast;
             searchInput.value = ``;
             errorParagraph.textContent = ``;
+            weatherImg.src = data.icon;
         })
     })
 })
