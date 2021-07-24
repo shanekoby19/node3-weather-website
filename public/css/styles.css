@@ -1,60 +1,74 @@
-body {
-    color: #333333;
-    font-family: arial;
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 0 16px;
-
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-footer {
-    color: #888888;
-    border-top: 1px solid #eeeeee;
-    margin-top: 16px;
-    padding: 16px 0;
-}
-
-header {
-    margin-top: 16px;
-    margin-bottom: 48px;
-}
-
-h1 {
-    font-size: 64px;
-    margin-bottom: 16px;
-}
-
-header a {
-    color: #888888;
-    margin-right: 16px;
-    text-decoration: none;
-    font-size: 20px
-}
-
-.portrait {
-    width: 250px;
+* {
+    box-sizing: border-box;
 }
 
 .main-content {
-    flex-grow: 1;
+    padding: 0.5rem 1rem;
+    height: 90vh;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+.main-header > a {
+    display: inline-block;
+    margin-right: 0.5rem;
+    text-decoration: none;
+    color: darkgrey;
+    font-size: 1rem;
+    border-radius: 0.4rem;
+    background-color: white;
+    padding: 1rem 0.5rem;
+}
+
+.main-header > a:hover,
+.main-content > a:active {
+    font-size: 1.2rem;
+    color: white;
+    background-color: darkgrey;
 }
 
 input {
-    border: 1px solid #cccccc;
-    padding: 8px;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    color: black;
 }
 
 button {
-    cursor: pointer;
-    border: 1px solid #888888;
-    background: #888888;
+    padding: 0.5rem 1rem;
+    background-color: darksalmon;
     color: white;
-    padding: 8px;
+}
+
+.forecast-container {
+    position: absolute;
+    margin: 1rem 0.5rem;
+    padding: 1rem;
+    border: 2px solid black;
+    box-shadow: 2px 2px 4px 4px rgba(233, 233, 250, 0.5);
+    height: 70%;
+    width: 97%;
+    top: 20%;
 }
 
 .weather-icon {
-    margin-top: 8px;
+    margin-top: 5rem;
 }
+
+.forecastParagraph {
+    width: 66%;
+    margin: auto;
+}
+
+.forecastError {
+    width: 66%;
+    margin: auto;
+}
+
+.main-footer {
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    text-align: center;
+}
+

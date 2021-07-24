@@ -10,16 +10,20 @@
     <body>
         <div class="main-content">
             {{>header}}
-            <p>Use this site to get your weather!</p>
+            <div class="forecast-container">
+                <p>Use this site to get your weather!</p>
 
-            <form>
-                <input placeholder="City">
-                <button>Search</button>
-            </form>
+                <form>
+                    <input placeholder="City">
+                    <button>Search</button>
+                </form>
 
-            <img class="weather-icon">
-            <p class="errorParagraph"></p>
-            <p class="forecastParagraph"></p>
+                <img class="weather-icon">
+                <h2 class="forecast-location"></h2>
+                <p class="forecast-temperature"></p> 
+                <p class="forecastParagraph"></p>
+                <p class="errorParagraph"></p>
+            </div>
         </div>
         {{>footer}}
 
